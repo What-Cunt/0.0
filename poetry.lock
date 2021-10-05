@@ -1,0 +1,18 @@
+[[package]]
+name = "pytube"
+version = "11.0.1"
+description = "Python 3 library for downloading YouTube Videos."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[metadata]
+lock-version = "1.1"
+python-versions = "^3.8"
+content-hash = "f24468667d8fc4d8ab018f3953f860341594eb47d2a1b429c2cff7165024b422"
+
+[metadata.files]
+pytube = [
+    {file = "pytube-11.0.1-py3-none-any.whl", hash = "sha256:d4dfea7394d7662edac3831432b349b2afac984e0d0bc4bdb611ec1f3fc16318"},
+    {file = "pytube-11.0.1.tar.gz", hash = "sha256:47643a6ff553cbc4d6be748ff14c9c45f79984e15005adff25d62b18110abe43"},
+]
