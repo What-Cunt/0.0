@@ -1,2 +1,3 @@
-language = ""
-run = ""
+language = "python3"
+run = "python a.py"
+
