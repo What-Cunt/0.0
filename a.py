@@ -7,6 +7,7 @@ yt = YouTube('https://youtu.be/z15wKo0r-74')
 print('The title: ', yt.title, "\n")
 print('The Url', yt.thumbnail_url, '\n')
 
+
 #What is there to download
 print(yt.streams.filter(progressive=True), '\n')
 print(yt.streams.filter(adaptive=True), '\n')
@@ -14,8 +15,18 @@ print(yt.streams.filter(only_audio=True), '\n')
 print(yt.streams.filter(file_extension='mp4'))
 # print(yt.streams.filter(file_extension=''))
 
+#Subtitles and Captions Tracks (undone)
+print(yt.captions, '/n')
+caption = yt.captions.get_by_language_code('en')
+print(caption.xml_captions)
+#Choo
 
-#Choosing what to download
-stream = yt.streams.get_by_itag(int(input()))
+#Using playlists
+from pytube import Playlist
+p = Playlist('https://youtube.com/playlist?list=PLAUxsgLNM2Bt8apMzywvdzOJSzlfW4OQa')
+print(f'Downloading: {p.title}')
+for video in p.videos:
+  video.streams.first().download()
+#choosing which file/tag to downloadm = yt.streams.get_by_itag(int(input()))
 input('enter to continue')
 stream.download()
