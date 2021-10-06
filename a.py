@@ -21,7 +21,8 @@ print(yt.streams.filter(only_audio=True), '\n')
 # print(yt.streams.filter(file_extension='mp4'))
 # print(yt.streams.filter(file_extension=''))('wtf is happening dawg???')
 
-#playlist
+#playlist 
+### REFER TO READ.MD NOTES SECTION###
 print(f'Downloading: {p.title}')
 for video in p.videos: video.streams.get_by_itag(int(input())).download()
 
