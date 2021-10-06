@@ -19,7 +19,8 @@ print(yt.streams.filter(file_extension='mp4'))
 
 p = Playlist('https://youtube.com/playlist?list=PLAUxsgLNM2Bt8apMzywvdzOJSzlfW4OQa')
 print(f'Downloading: {p.title}')
-for video in p.videos: video.streams.first().download()
-#choosing wh file/tag to downloadm = yt.streams.get_by_itag(int(input()))
+for video in p.videos: video.streams.get_by_itag(int(input())).download()
+  
+#choosing which file/tag to download = yt.streams.get_by_itag(int(input()))
 input('enter to continue')
 stream.download()
