@@ -24,7 +24,7 @@ print(yt.streams.filter(file_extension='mp3'))
 print('The title: ', p.title, "\n")
 # print('The Url', p.thumbnail_url, '\n')
 print(f'Downloading: {p.title}')
-for video in p.videos: video.streams.get_by_itag(int(input())).download()
+for video in p.videos: video.streams.get_by_itag(int(input())).download(output_path='IGOR/')
 
 #choosing which file/tag to download 
 stream = yt.streams.get_by_itag(int(input()))
